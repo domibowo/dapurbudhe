@@ -24,12 +24,16 @@ public class TrxHistory {
     @JoinColumn(name = "customer_id")
     private Customer customer;
 
-    public TrxHistory(String id, Double grandTotal, Timestamp trx_time, List<TrxDetail> details, Customer customer) {
+    @Transient
+    private String customerId;
+
+    public TrxHistory(String id, Double grandTotal, Timestamp trx_time, List<TrxDetail> details, Customer customer, String customerId) {
         this.id = id;
         this.grandTotal = grandTotal;
         this.trx_time = trx_time;
         this.details = details;
         this.customer = customer;
+        this.customerId = customerId;
     }
 
     public TrxHistory() {
@@ -69,5 +73,13 @@ public class TrxHistory {
 
     public void setCustomer(Customer customer) {
         this.customer = customer;
+    }
+
+    public String getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(String customerId) {
+        this.customerId = customerId;
     }
 }

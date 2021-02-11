@@ -23,12 +23,20 @@ public class TrxDetail {
     @JoinColumn(name = "history_id")
     private TrxHistory history;
 
-    public TrxDetail(String id, Integer quantity, Double subTotal, Product product, TrxHistory history) {
+    @Transient
+    private String productId;
+
+    @Transient
+    private String historyId;
+
+    public TrxDetail(String id, Integer quantity, Double subTotal, Product product, TrxHistory history, String productId, String historyId) {
         this.id = id;
         this.quantity = quantity;
         this.subTotal = subTotal;
         this.product = product;
         this.history = history;
+        this.productId = productId;
+        this.historyId = historyId;
     }
 
     public TrxDetail() {
@@ -68,5 +76,21 @@ public class TrxDetail {
 
     public void setHistory(TrxHistory history) {
         this.history = history;
+    }
+
+    public String getProductId() {
+        return productId;
+    }
+
+    public void setProductId(String productId) {
+        this.productId = productId;
+    }
+
+    public String getHistoryId() {
+        return historyId;
+    }
+
+    public void setHistoryId(String historyId) {
+        this.historyId = historyId;
     }
 }
