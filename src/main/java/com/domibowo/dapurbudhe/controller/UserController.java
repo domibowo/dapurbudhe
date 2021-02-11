@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/admin")
 public class UserController {
 
     @Autowired
@@ -30,12 +29,12 @@ public class UserController {
         return services.authenticateUser(username, password);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/admin/{id}")
     public User getUserById(@PathVariable String id){
         return services.getUserById(id);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/admin/{id}")
     public void deleteUser(@PathVariable String id){
         services.deleteUser(id);
     }
