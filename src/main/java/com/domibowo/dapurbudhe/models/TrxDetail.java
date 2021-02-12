@@ -1,5 +1,6 @@
 package com.domibowo.dapurbudhe.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -17,6 +18,7 @@ public class TrxDetail {
 
     @ManyToOne
     @JoinColumn(name = "product_id")
+    @JsonIgnoreProperties(value = {"prdDetails","details"})
     private Product product;
 
     @ManyToOne

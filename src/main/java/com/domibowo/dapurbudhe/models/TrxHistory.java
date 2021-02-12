@@ -1,5 +1,7 @@
 package com.domibowo.dapurbudhe.models;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -15,13 +17,17 @@ public class TrxHistory {
     @GenericGenerator(name = "uuid", strategy = "uuid")
     private String id;
     private Double grandTotal;
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "E, dd MMM yyyy HH:mm:ss z", timezone = "GMT+7")
     private Timestamp trx_time;
 
     @OneToMany(mappedBy = "history")
+    @JsonIgnoreProperties(value = {"history"})
     private List<TrxDetail> details;
 
     @ManyToOne
     @JoinColumn(name = "customer_id")
+    @JsonIgnoreProperties(value = {"histories"})
     private Customer customer;
 
     @Transient
