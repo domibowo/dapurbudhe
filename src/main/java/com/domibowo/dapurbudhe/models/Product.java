@@ -1,5 +1,6 @@
 package com.domibowo.dapurbudhe.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -20,6 +21,7 @@ public class Product {
 
     @OneToOne
     @JoinColumn(name="detail_id")
+    @JsonIgnoreProperties(value = {"product"})
     private ProductDetails prdDetails;
 
     @OneToMany(mappedBy = "product")

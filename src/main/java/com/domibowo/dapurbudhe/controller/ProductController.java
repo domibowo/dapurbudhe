@@ -32,7 +32,7 @@ public class ProductController {
     }
 
     @PutMapping("/form")
-    public Product updateProduct(@RequestPart Product product){
+    public Product updateProduct(@RequestBody Product product){
         return services.updateProduct(product);
     }
 
@@ -46,7 +46,7 @@ public class ProductController {
         return services.getAllProductByNameLike(name);
     }
 
-    @DeleteMapping("{id}")
+    @DeleteMapping("/{id}")
     public void deleteProduct(@PathVariable String id){
         services.deleteProduct(id);
     }

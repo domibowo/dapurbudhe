@@ -3,6 +3,7 @@ package com.domibowo.dapurbudhe.service.impl;
 import com.domibowo.dapurbudhe.exceptions.ResourceNotFoundException;
 import com.domibowo.dapurbudhe.models.Product;
 import com.domibowo.dapurbudhe.repositories.ProductRepository;
+import com.domibowo.dapurbudhe.service.ProductDetailsService;
 import com.domibowo.dapurbudhe.service.ProductServices;
 import com.domibowo.dapurbudhe.utils.FileHandler;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -25,6 +26,9 @@ public class ProductServicesImpl implements ProductServices {
     FileHandler fileHandler;
 
     @Autowired
+    ProductDetailsService productDetailsService;
+
+    @Autowired
     ObjectMapper mapper;
 
     @Override
@@ -38,6 +42,7 @@ public class ProductServicesImpl implements ProductServices {
 
     @Override
     public Product updateProduct(Product product) {
+        product.setPrdDetails(productDetailsService.getDetailsByID(product.getPrdDetailId()));
         return repository.save(product);
     }
 
