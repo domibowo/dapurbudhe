@@ -35,8 +35,8 @@ public class TrxDetailServicesImpl implements TrxDetailServices {
     }
 
     @Override
-    public TrxDetail saveHistory(TrxDetail detail) {
-        return repository.save(detail);
+    public void saveHistory(TrxDetail detail) {
+        repository.save(detail);
     }
 
     @Override
