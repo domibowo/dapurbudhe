@@ -1,0 +1,734 @@
+{
+	"info": {
+		"_postman_id": "087c3e55-0328-47a3-8266-3339e01c5621",
+		"name": "dapurbudhe",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Sign-Up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"bowodomi\",\r\n    \"email\":\"bowoganteng@gmail.com\",\r\n    \"password\":\"Bowodomi9596\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8099/sign-up",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"sign-up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign-In",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"bowodomi\",\r\n    \"password\":\"Bowodomi9596\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8099/sign-in",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"sign-in"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8099/admin/402881897790be9f017790c207cb0000",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"admin",
+								"402881897790be9f017790c207cb0000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"402881897790be9f017790c81c3b0001\",\r\n    \"username\":\"bowodomi96\",\r\n    \"email\":\"bowoganteng@gmail.com\",\r\n    \"password\":\"Bowodomi96\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8099/setting",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"setting"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8099/admin/402881897790be9f017790c81c3b0001",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"admin",
+								"402881897790be9f017790c81c3b0001"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Save Customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Jake Doe\",\r\n    \"address\":\"Jl.Bawang Putih no. 12\",\r\n    \"city\":\"Depok\",\r\n    \"province\":\"West Java\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8099/customer/form",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"customer",
+								"form"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Customer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"402881897791c4c8017791ca8b080000\",\r\n    \"name\": \"John Doe\",\r\n    \"address\": \"Jl.Pahlawan Seribu no. 121\",\r\n    \"city\": \"South Tangerang\",\r\n    \"province\": \"Banten\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8099/customer/form",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"customer",
+								"form"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customers by name like",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8099/customer?name=ja",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"customer"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "ja"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8099/customer/402881897791c4c8017791cd17b60001",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"customer",
+								"402881897791c4c8017791cd17b60001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Customer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8099/customer/402881897791c4c8017791d045fc0002",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"customer",
+								"402881897791c4c8017791d045fc0002"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Product Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"id\": \"402881897794daea017794df6a2d0000\",\"productName\":\"Zuppa Soup\",\"image\":\"zuppa_soup.jpg\",\"price\":24000.00,\"preOrder\":2,\"prdDetailId\":\"40288189779509700177950f8c7f0000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8099/product/form",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"product",
+								"form"
+							]
+						},
+						"description": "Update Product Details. To update photo, please refers to Save Product"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8099/product/40288189779537430177954a62fa0000",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"product",
+								"40288189779537430177954a62fa0000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/domib/OneDrive/Gambar/avatars-000332916880-1y4hk2-t500x500.jpg"
+								},
+								{
+									"key": "reqProduct",
+									"value": "{\n\"productName\":\"Foo\",\"price\":250.00,\"preOrder\":1\n}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8099/product/form",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"product",
+								"form"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Products by criteria",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8099/product?name=a",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"product"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product picture",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8099/product/image/40288189779537430177954a62fa0000",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"product",
+								"image",
+								"40288189779537430177954a62fa0000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8099/product/4028818977954d9301779552d3200000",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"product",
+								"4028818977954d9301779552d3200000"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product Details",
+			"item": [
+				{
+					"name": "Save Product Details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"prdDetails\":\"foo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8099/product/details/form",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"product",
+								"details",
+								"form"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get product detail by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8099/product/details/40288189779509700177950f8c7f0000",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"product",
+								"details",
+								"40288189779509700177950f8c7f0000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update product detail",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"40288189779509700177950f8c7f0000\",\r\n    \"prdDetails\": \"Zuppa soup with a lot of beef, champignon mushrooms, bread, and veggies\",\r\n    \"product\": {\r\n        \"id\": \"402881897794daea017794df6a2d0000\",\r\n        \"productName\": \"Zuppa Soup\",\r\n        \"image\": \"zuppa_soup.jpg\",\r\n        \"price\": 24000.0,\r\n        \"preOrder\": 2,\r\n        \"prdDetails\": {\r\n            \"id\": \"40288189779509700177950f8c7f0000\",\r\n            \"prdDetails\": \"Zuppa soup with a lot of beef, champignon mushrooms, and veggies\"\r\n        },\r\n        \"details\": [],\r\n        \"prdDetailId\": null\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8099/product/details/form",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"product",
+								"details",
+								"form"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete product detail",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8099/product/details/40288189779553480177955dd2340000",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"product",
+								"details",
+								"40288189779553480177955dd2340000"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TransactionDetail",
+			"item": [
+				{
+					"name": "Get transaction detail by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8099/transaction/detail/402881897796ad5b017796ae1ede0000",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"transaction",
+								"detail",
+								"402881897796ad5b017796ae1ede0000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all transaction details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8099/transaction/detail",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"transaction",
+								"detail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get cart",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8099/cart",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"cart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save transaction detail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantity\": 2,\r\n    \"productId\": \"40288189779537430177954a62fa0000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8099/transaction",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"transaction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update transaction detail",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"402881897796ad5b017796ae1ede0000\",\r\n    \"quantity\":5,\r\n    \"productId\":\"402881897794daea017794df6a2d0000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8099/transaction",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"transaction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete transaction detail",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8099/transaction/detail/402881897796bf5b017796c5d59e0000",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"transaction",
+								"detail",
+								"402881897796bf5b017796c5d59e0000"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TrxHistory",
+			"item": [
+				{
+					"name": "Delete History by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8099/history/402881897796f961017796fad9fe0000",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"history",
+								"402881897796f961017796fad9fe0000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get history by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8099/history/402881897797085d01779708a6d80000",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"history",
+								"402881897797085d01779708a6d80000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Submit transaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\":\"402881897791c4c8017791cd17b60001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8099/transaction/submit",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"transaction",
+								"submit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get transaction history",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8099/history",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"history"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
